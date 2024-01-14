@@ -17,4 +17,4 @@ use App\Http\Controllers\ColorGameController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/colorgame', [ColorGameController::class, 'color']);
+Route::get('/colorgame', [ColorGameController::class, 'color'])->name('game.color');

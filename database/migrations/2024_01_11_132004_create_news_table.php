@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             // 格式:字串  欄位名稱:img_path
-            $table->string('img_path');
+            $table->string('img_path')->nullable()->default('')->comment('新聞圖片路徑');
             // 格式:字串  欄位名稱:title
-            $table->string('title');
+            $table->string('title')->nullable()->default('')->comment('新聞標題');
             // 格式:字串  欄位名稱:content
-            $table->string('content');
+            $table->string('content')->nullable()->default('')->comment('新聞內容');
         });
     }
 
